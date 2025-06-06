@@ -1,0 +1,25 @@
+{
+  "name": "sunvoy-reverse-engineering",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "source/index.ts",
+  "scripts": {
+    "start": "ts-node source/index.ts",
+    "build": "tsc",
+    "run": "node dist/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fetch-cookie": "^3.1.0",
+    "fs-extra": "^11.3.0",
+    "node-fetch": "^2.7.0",
+    "tough-cookie": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.30",
+    "@types/node-fetch": "^2.6.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
