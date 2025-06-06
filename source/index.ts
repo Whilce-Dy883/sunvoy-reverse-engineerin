@@ -15,6 +15,9 @@ async function main(): Promise<void> {
   // Fetch the list of all users from the API
   const users = await getUserList();
 
+  console.log("User List", users);
+
+  return;
   // Scrape the current logged-in user's profile from settings page
   const currentUser = await getCurrentUser();
 
