@@ -9,6 +9,7 @@
     "run": "node dist/index.js"
   },
   "dependencies": {
+    "axios": "^1.9.0",
     "cheerio": "^1.0.0",
     "fetch-cookie": "^3.1.0",
     "fs-extra": "^11.3.0",

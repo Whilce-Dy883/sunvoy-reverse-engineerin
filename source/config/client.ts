@@ -20,7 +20,12 @@ export const USERS_API = `${BASE_URL}/api/users`;
 /**
  * URL for accessing the settings page (used to validate session or scrape current user).
  */
-export const CURRENT_USER_API = `${BASE_URL}/settings`;
+export const CURRENT_USER_API = `https://api.challenge.sunvoy.com/api/settings`;
+
+/**
+ * URL for getting the Token settings page.
+ */
+export const TOKEN_URL = `${BASE_URL}/settings/tokens`;
 
 /**
  * Shared cookie jar instance for session management across multiple requests.

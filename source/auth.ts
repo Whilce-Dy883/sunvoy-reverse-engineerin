@@ -1,7 +1,14 @@
 import fs from "fs-extra";
 import * as cheerio from "cheerio";
 import { URLSearchParams } from "url";
-import { BASE_URL, cookieJar, CURRENT_USER_API, fetchWithCookies, LOGIN_URL } from "./config/clients";
+import {
+  fetchWithCookies,
+  BASE_URL,
+  LOGIN_URL,
+  CURRENT_USER_API,
+  cookieJar,
+  TOKEN_URL,
+} from "./config/client";
 import { AuthData } from "./types";
 
 // File path to store authentication cookie data
@@ -69,7 +76,7 @@ export async function reuseOrLogin(): Promise<string> {
     const { cookie }: AuthData = await fs.readJson(AUTH_FILE);
 
     // Try to validate existing session using the settings endpoint
-    const res = await fetchWithCookies(CURRENT_USER_API, {
+    const res = await fetchWithCookies(TOKEN_URL, {
       headers: { cookie },
     });
 
